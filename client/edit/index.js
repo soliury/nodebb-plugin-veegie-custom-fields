@@ -20,7 +20,7 @@ define('forum/client/plugins/custom-fields-edit', [], function () {
         var data = $form.serializeArray().map(function (item) {
             return {
                 name : item.name.replace(idPrefix, ''),
-                value: item.value
+                value: utils.escapeHTML(item.value)
             }
         });
 
