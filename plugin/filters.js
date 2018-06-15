@@ -25,14 +25,11 @@
                 //Reduce to only populated fields
                 var i = 0, len = result.fields.length, fieldMeta;
                 for (i; i < len; ++i) {
-                    fieldMeta = result.fields[i];
-                    var value = result.data[fieldMeta.key];
-                    if (value) {
-                        customFields.push({
-                            name : fieldMeta.name,
-                            value: value
-                        });
-                    }
+                  fieldMeta = result.fields[i];
+                  var value = result.data[fieldMeta.key];
+                  if (value) {
+                    customFields[fieldMeta.key] = value;
+                  }
                 }
             }
 
@@ -76,27 +73,56 @@
             return callback(null, topicData);
         }
 
-        async.map(topicData.posts, function (post, next) {
+        async.map(topicData.topic.posts, function (post, next) {
             getCustomFields(post.user.uid, function (error, customFields) {
                 if (error) {
                     return next(error);
                 }
-                post.customFields = customFields;
+                post.customFields = {};
+                Object.assign(post.customFields, customFields);
                 next(null, post);
             });
         }, function (error, results) {
             if (error) {
                 return callback(error);
             }
-            topicData.posts = results;
+            topicData.topic.posts = results;
             callback(null, topicData);
         });
     };
 
+    Filter.posts = function (posts, callback) {
+        async.map(posts.posts, function (post, next) {
+            getCustomFields(post.uid, function (error, customFields) {
+                if (error) {
+                    return next(error);
+                }
+                post.customFields = {};
+                Object.assign(post.customFields, customFields);
+                next(null, post);
+            });
+        }, function (error, results) {
+            if (error) {
+                return callback(error);
+            }
+            posts.posts = results;
+            callback(null, posts);
+        });
+    };
+
+    Filter.post = function (post, callback) {
+       getCustomFields(post.post.uid, function (error, customFields) {
+               if (error) { return callback(error); }
+               post.post.customFields = {};
+               Object.assign(post.post.customFields, customFields);
+               callback(null, post);
+       });
+   };
+
     Filter.userAccountEdit = function (data, callback) {
         data.editButtons.push({
             link: '/user/' + data.userslug + '/edit/custom-fields',
-            text: 'Change Extra'
+            text: 'Social Networks & More'
         });
 
         callback(null, data);

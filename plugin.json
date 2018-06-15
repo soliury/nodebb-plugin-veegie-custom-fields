@@ -14,16 +14,24 @@
       "method": "hooks.filters.account"
     },
     {
-      "hook": "filter:controllers.topic.get",
-      "method": "hooks.filters.topic"
-    },
-    {
       "hook": "static:app.load",
       "method": "hooks.statics.load"
     },
     {
       "hook": "filter:user.account.edit",
       "method": "hooks.filters.userAccountEdit"
+    },
+    {
+      "hook": "filter:topic.get",
+      "method": "hooks.filters.topic"
+    },
+    {
+       "hook": "filter:post.getPosts",
+       "method": "hooks.filters.posts"
+    },
+    {
+       "hook": "filter:post.get",
+       "method": "hooks.filters.post"
     }
   ],
   "less": [
