@@ -1,14 +1,14 @@
 {
-  "name": "nodebb-plugin-ns-custom-fields",
-  "version": "5.0.1",
-  "description": "Adds custom fields to the profile",
+  "name": "nodebb-plugin-veegie-custom-fields",
+  "version": "0.0.1",
+  "description": "Adds custom fields to the profile. A custom fork of nodebb-plugin-ns-custom-fields. You probably want to use that one instead.",
   "main": "./plugin/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/NicolasSiver/nodebb-plugin-ns-custom-fields.git"
+    "url": "https://github.com/Veegie/nodebb-plugin-veegie-custom-fields"
   },
   "keywords": [
     "nodebb",
@@ -17,12 +17,12 @@
     "user",
     "extend"
   ],
-  "author": "Nicolas Siver",
+  "author": "Nicolas Siver, Veegie",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/NicolasSiver/nodebb-plugin-ns-custom-fields/issues"
+    "url": "https://github.com/Veegie/nodebb-plugin-veegie-custom-fields/issues"
   },
-  "homepage": "https://github.com/NicolasSiver/nodebb-plugin-ns-custom-fields",
+  "homepage": "https://github.com/Veegie/nodebb-plugin-veegie-custom-fields",
   "readmeFilename": "README.md",
   "dependencies": {
     "async": "^1.5.2",
