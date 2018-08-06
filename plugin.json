@@ -2,7 +2,7 @@
   "id": "nodebb-plugin-veegie-custom-fields",
   "name": "NodeBB Custom Fields",
   "description": "Adds custom fields to the profile. A custom fork of nodebb-plugin-ns-custom-fields. You probably want to use that one instead.",
-  "url": "https://github.com/Veegie/nodebb-plugin-veegie-custom-fields",
+  "url": "https://github.com/lastlifedevs/nodebb-plugin-veegie-custom-fields",
   "library": "./plugin/index.js",
   "hooks": [
     {

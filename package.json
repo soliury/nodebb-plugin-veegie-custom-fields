@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Veegie/nodebb-plugin-veegie-custom-fields"
+    "url": "https://github.com/lastlifedevs/nodebb-plugin-veegie-custom-fields"
   },
   "keywords": [
     "nodebb",
@@ -20,9 +20,9 @@
   "author": "Nicolas Siver, Veegie",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Veegie/nodebb-plugin-veegie-custom-fields/issues"
+    "url": "https://github.com/lastlifedevs/nodebb-plugin-veegie-custom-fields/issues"
   },
-  "homepage": "https://github.com/Veegie/nodebb-plugin-veegie-custom-fields",
+  "homepage": "https://github.com/lastlifedevs/nodebb-plugin-veegie-custom-fields",
   "readmeFilename": "README.md",
   "dependencies": {
     "async": "^1.5.2",
