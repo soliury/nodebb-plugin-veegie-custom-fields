@@ -1,5 +1,4 @@
 /* globals define, ajaxify, socket, app, config, utils, bootbox */
-
 define('forum/client/plugins/custom-fields-edit', [], function () {
     'use strict';
 
