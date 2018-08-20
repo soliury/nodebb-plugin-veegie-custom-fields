@@ -122,7 +122,7 @@
     Filter.userAccountEdit = function (data, callback) {
         data.editButtons.push({
             link: '/user/' + data.userslug + '/edit/custom-fields',
-            text: 'Social Networks & More'
+            text: 'Profile Links'
         });
 
         callback(null, data);
