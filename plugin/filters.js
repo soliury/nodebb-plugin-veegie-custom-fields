@@ -2,10 +2,8 @@
     'use strict';
 
     var async      = require('async'),
-        controller = require('./controller'),
         database   = require('./database'),
-        settings   = require('./settings'),
-        constants  = require('./constants');
+        settings   = require('./settings');
 
     var faIcon = 'fa-plus-square';
 
@@ -44,11 +42,12 @@
      * @param callback {function}
      */
     Filter.account = function (params, callback) {
-        controller.getFilledFields(params.userData.uid, function (error, fields) {
+        getCustomFields(params.userData.uid, function (error, fields) {
             if (error) {
                 return callback(error);
             }
-            params.userData.customFields = fields;
+            params.userData.customFields = {};
+            Object.assign(params.userData.customFields, fields);
             callback(null, params);
         });
     };
