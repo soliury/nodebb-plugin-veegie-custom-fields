@@ -4,10 +4,10 @@
     var async        = require('async'),
         objectAssign = require('object-assign'),
 
-        db           = require('./nodebb').db,
-        constants    = require('./constants'),
+        db           = require.main.require('./src/nodebb').db,
+        constants    = require.main.require('./src/constants'),
         namespace    = constants.NAMESPACE,
-        logger       = require('./logger');
+        logger       = require.main.require('./src/logger');
 
     var createField = function (id, key, name, type) {
         return {

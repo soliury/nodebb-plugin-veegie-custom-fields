@@ -1,12 +1,12 @@
 (function (Socket) {
     'use strict';
 
-    var controller = require('./controller'),
-        sockets    = require('./nodebb').pluginSockets,
-        settings   = require('./settings'),
-        database   = require('./database'),
-        constants  = require('./constants'),
-        logger     = require('./logger'),
+    var controller = require.main.require('./src/controller'),
+        sockets    = require.main.require('./src/nodebb').pluginSockets,
+        settings   = require.main.require('./src/settings'),
+        database   = require.main.require('./src/database'),
+        constants  = require.main.require('./src/constants'),
+        logger     = require.main.require('./src/logger'),
 
         namespace  = constants.SOCKETS;
 
