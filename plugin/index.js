@@ -5,7 +5,7 @@
         _         = require('underscore'),
         path      = require('path'),
 
-        nconf     = require.main.require('./src/nodebb').nconf,
+        nconf     = require.main.require('nconf'),
         routes    = require.main.require('./src/routes'),
         sockets   = require.main.require('./src/sockets'),
         constants = require.main.require('./src/constants'),
