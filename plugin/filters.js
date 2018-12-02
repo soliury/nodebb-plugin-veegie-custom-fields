@@ -2,8 +2,8 @@
     'use strict';
 
     var async      = require('async'),
-        database   = require.main.require('./src/database'),
-        settings   = require.main.require('./src/settings');
+        database   = require('./database'),
+        settings   = require('./settings');
 
     var faIcon = 'fa-plus-square';
 

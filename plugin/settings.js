@@ -3,9 +3,9 @@
 
     var objectAssign  = require('object-assign'),
 
-        meta          = require.main.require('./src/nodebb').meta,
-        constants     = require.main.require('./src/constants'),
-        logger        = require.main.require('./src/logger'),
+        meta          = require('./nodebb').meta,
+        constants     = require('./constants'),
+        logger        = require('./logger'),
 
         //Memory cache
         settingsCache = null,

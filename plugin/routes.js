@@ -2,9 +2,9 @@
     'use strict';
 
     var async      = require('async'),
-        controller = require.main.require('./src/controller'),
-        database   = require.main.require('./src/database'),
-        nodebb     = require.main.require('./src/nodebb');
+        controller = require('./controller'),
+        database   = require('./database'),
+        nodebb     = require('./nodebb');
 
     var accountHelpers = nodebb.accountHelpers,
         helpers        = nodebb.helpers,

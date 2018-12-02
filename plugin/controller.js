@@ -5,10 +5,10 @@
         util      = require('util'),
         keyMirror = require('keymirror'),
 
-        settings  = require.main.require('./src/src/src/settings'),
-        database  = require.main.require('./src/database'),
-        constants = require.main.require('./src/constants'),
-        logger    = require.main.require('./src/logger'),
+        settings  = require('./settings'),
+        database  = require('./database'),
+        constants = require('./constants'),
+        logger    = require('./logger'),
 
         Types     = keyMirror({
             input : null,
