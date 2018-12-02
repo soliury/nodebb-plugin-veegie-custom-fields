@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-veegie-custom-fields",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Adds custom fields to the profile. A custom fork of nodebb-plugin-ns-custom-fields. You probably want to use that one instead.",
   "main": "./plugin/index.js",
   "scripts": {
