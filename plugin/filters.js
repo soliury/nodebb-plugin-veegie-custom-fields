@@ -92,14 +92,19 @@
 
     Filter.posts = function (posts, callback) {
         async.map(posts.posts, function (post, next) {
-            getCustomFields(post.uid, function (error, customFields) {
-                if (error) {
-                    return next(error);
-                }
-                post.customFields = {};
-                Object.assign(post.customFields, customFields);
+            if (post == null || post == undefined) {
                 next(null, post);
-            });
+            }
+            else {
+                getCustomFields(post.uid, function (error, customFields) {
+                    if (error) {
+                        return next(error);
+                    }
+                    post.customFields = {};
+                    Object.assign(post.customFields, customFields);
+                    next(null, post);
+                });
+            }
         }, function (error, results) {
             if (error) {
                 return callback(error);
