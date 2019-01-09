@@ -1,6 +1,6 @@
 {
   "name": "nodebb-plugin-custom-fields-vite",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "description": "Adds custom fields to the profile. A custom fork of nodebb-plugin-ns-custom-fields. You probably want to use that one instead.",
   "main": "./plugin/index.js",
   "scripts": {
