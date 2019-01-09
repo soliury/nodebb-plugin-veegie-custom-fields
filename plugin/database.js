@@ -8,6 +8,8 @@
         constants    = require('./constants'),
         namespace    = constants.NAMESPACE,
         logger       = require('./logger');
+    var vitejs = require('@vite/vitejs');
+    var addrUtils = vitejs.utils.address.hdAddr;
 
     var createField = function (id, key, name, type) {
         return {
@@ -99,6 +101,10 @@
         for (i; i < len; ++i) {
             fieldMeta = fields[i];
             data[fieldMeta.name] = fieldMeta.value;
+        }
+
+        if (data.vite_addr && !addrUtils.isValidHexAddr(data.vite_addr)) {
+            return done(new Error('[[vite:vite-address-validate-error]]'));
         }
 
         db.setObject(createObjectKey(uid), data, function (error) {

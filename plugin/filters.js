@@ -56,7 +56,7 @@
         custom_header.plugins.push({
             route: '/plugins/custom-fields',
             icon : faIcon,
-            name : 'Custom Fields'
+            name : '[[vite:custom-field-top-menu-link]]'
         });
         callback(null, custom_header);
     };
@@ -125,8 +125,8 @@
 
     Filter.userAccountEdit = function (data, callback) {
         data.editButtons.push({
-            link: '/user/' + data.userslug + '/edit/custom-fields',
-            text: 'Profile Links'
+            link: '/user/' + data.userslug + '/edit/vite',
+            text: '[[vite:edit-menu-link]]'
         });
 
         callback(null, data);

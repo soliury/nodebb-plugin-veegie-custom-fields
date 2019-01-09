@@ -1,5 +1,5 @@
 {
-  "name": "nodebb-plugin-veegie-custom-fields",
+  "name": "nodebb-plugin-custom-fields-vite",
   "version": "0.0.6",
   "description": "Adds custom fields to the profile. A custom fork of nodebb-plugin-ns-custom-fields. You probably want to use that one instead.",
   "main": "./plugin/index.js",
@@ -25,6 +25,7 @@
   "homepage": "https://github.com/lastlifedevs/nodebb-plugin-veegie-custom-fields",
   "readmeFilename": "README.md",
   "dependencies": {
+    "@vite/vitejs": "^1.1.2",
     "async": "^1.5.2",
     "fs-extra": "^0.26.5",
     "keymirror": "^0.1.1",

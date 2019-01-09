@@ -15,7 +15,7 @@ define('forum/client/plugins/custom-fields-edit', [], function () {
     };
 
     Edit.save = function () {
-        var $form = $('.form-horizontal');
+        var $form = $('.edit-form');
         var data = $form.serializeArray().map(function (item) {
             return {
                 name : item.name.replace(idPrefix, ''),
@@ -28,13 +28,13 @@ define('forum/client/plugins/custom-fields-edit', [], function () {
                 return app.alertError(error.message);
             }
 
-            app.alertSuccess('Custom fields are saved.');
+            app.alertSuccess('[[vite:bind-vite-success]]');
         });
     };
 
     function appendControl($container) {
         var $row = $('<div></div>').addClass('row');
-        var $column = $('<div></div>').addClass('col-md-4 col-md-offset-4 form-actions');
+        var $column = $('<div></div>').addClass('form-actions');
         var $button = $('<a></a>')
             .addClass('btn btn-primary btn-block')
             .attr('href', '#')
@@ -119,12 +119,10 @@ define('forum/client/plugins/custom-fields-edit', [], function () {
 
     // Create 3 column layout
     function renderFields($parent) {
-        var $form = $('<form></form>').addClass('form-horizontal');
+        var $form = $('<form></form>').addClass('edit-form');
         var $row = $('<div></div>').addClass('row');
         var columns = [
-            $('<div></div>').addClass('col-md-4'),
-            $('<div></div>').addClass('col-md-4'),
-            $('<div></div>').addClass('col-md-4')
+            $('<div></div>').addClass('form-group'),
         ];
 
         $parent.append($form);
