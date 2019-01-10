@@ -56,7 +56,7 @@
         custom_header.plugins.push({
             route: '/plugins/custom-fields',
             icon : faIcon,
-            name : '[[vite:custom-field-top-menu-link]]'
+            name : 'Custom Fields'
         });
         callback(null, custom_header);
     };
